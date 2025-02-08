@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>REGISTER</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+  .container{
+    background:white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left:310px;
+  width:730px;
+  margin-top:30px;
+  box-shadow:5px 10px  10px black;
+  }
+  .form-control{
+    margin-top:13px;
+    background-color:lightgrey;
+    color:black;
+    height:38px;
+    width:350px;
+  }
+  .d2{
+    margin-top: 0px;
+    margin-left: 20px;
+      border-bottom: 1px solid grey;
+  }
+
+  .box{
+    zoom:1.5;
+    border-radius: -10px;
+    color:grey;
+
+  }
+  </style>
+  </head>
+  <body style="background-color:black;">
+  <div class="container">
+  <form name="forms" action="register.php" method="post" onsubmit="return validation()">
+  <h2 style="padding:20px;height:70px;margin-top:0px;width:730px;margin-left:-15px;background:url('internoffice.jpg');background-repeat: no-repeat;background-size: cover;color:white;text-align:center;word-spacing:5px;box-shadow:0px 6px lightgrey"><b>REGISTRATION FORM</b></h2>
+
+<br><br>
+
+<div class="col-sm-4"><br>
+  <label style="margin-left:40px;font-size:17px;font-weight:bold;color:black">Candidate Name</label>
+</div>
+<div class="col-sm-7">
+  <input type="text" name="Candidate" id="Candidate" class="form-control" placeholder=" Full Name">
+</div>
+<span id="username" class="text-danger" style="font-weight:bold;margin-left:260px;"></span>
+<br>
+<br><br>
+
+
+<div class="col-sm-4"><br>
+    <label style="margin-left:40px;font-size:17px;font-weight:bold;color:black">Gender</label>
+ </div>
+<div class="col-sm-7" style="margin-top:22px;margin-left:3px;color:black;">
+<div class="radio-inline">
+    <label style="font-weight:lighter;">
+    <input type="radio" name="gender" id="gender" value="Male">Male&nbsp &nbsp &nbsp</input>
+  </label>
+  </div>
+ <div class="radio-inline">
+      <label style="font-weight:lighter;">
+        <input type="radio" name="gender" id="gender" value="Female">Female&nbsp &nbsp &nbsp</input>
+      </label>
+ </div>
+ <div class="radio-inline">
+    <label style="font-weight:lighter;">
+      <input type="radio" name="gender" id="gender" value="Other">Other&nbsp &nbsp &nbsp</input>
+    </label>
+ </div>
+</div>
+<span id="gender" class="text-danger" style="font-weight:bold;margin-left:20px;"></span>
+<br><br>
+<br>
+
+
+<div class="col-sm-4"><br>
+    <label style="margin-left:40px;font-size:17px;font-weight:bold;color:black">Age</label>
+ </div>
+ <div class="col-sm-7">
+<select name="age" id="age" class="form-control" style="color:black;"  >
+<option value="Choose option" >Choose option</option>
+  <option value="17-18">17-18</option>
+  <option value="18-19">18-19</option>
+  <option value="19-20">19-20</option>
+  <option value="20-21">20-21</option>
+  <option value="21-22">21-22</option>
+    <option value="22-23">22-23</option>
+</select>
+</div>
+<span id="language" class="text-danger" style="font-weight:bold;margin-left:250px;"></span>
+<br>
+<br><br><br>
+
+<div class="col-sm-4"><br>
+    <label style="margin-left:40px;font-size:17px;font-weight:bold;color:black">Mail Id</label>
+ </div>
+<div class="col-sm-7">
+  <input type="text" name="email" id="email" class="form-control" placeholder="  Email">
+</div>
+<span id="emails" class="text-danger" style="font-weight:bold;margin-left:250px;"></span>
+<br>
+<br><br><br>
+
+<div class="col-sm-4"><br>
+    <label style="margin-left:40px;font-size:17px;font-weight:bold;color:black">Phone Number</label>
+ </div>
+<div class="col-sm-7">
+  <input type="tel" name="phone" id="phone" class="form-control" placeholder="  Phone Number">
+</div>
+<span id="phone" class="text-danger" style="font-weight:bold;margin-left:250px;"></span>
+<br>
+<br><br><br>
+
+<div class="col-sm-4"><br>
+    <label style="margin-left:40px;font-size:17px;font-weight:bold;color:black">Applied for</label>
+ </div>
+<div class="col-sm-7">
+<select   name="applied" id="applied" class="form-control" style="color:black;"  >
+<option value="Choose option">Choose option</option>
+  <option value="Intern">Intern</option>
+  <option value="Trainee">Trainee</option>
+</select>
+</div>
+<span id="course" class="text-danger" style="font-weight:bold;margin-left:250px;"></span>
+<br>
+<br><br><br>
+
+<div class="col-sm-4"><br>
+    <label style="margin-left:40px;font-size:17px;font-weight:bold;color:black">College Name</label>
+ </div>
+<div class="col-sm-7">
+  <input type="text" name="college" id="college" class="form-control" placeholder="  College Name">
+</div>
+<span  id="college" class="text-danger" style="font-weight:bold;margin-left:250px;"></span>
+<br>
+<br><br><br>
+
+<div class="col-sm-4"><br>
+    <label style="margin-left:40px;font-size:17px;font-weight:bold;color:black">Address</label>
+ </div>
+<div class="col-sm-7">
+  <textarea name="address" id="address" class="form-control" rows="3" cols="40" style="margin-left:0px;"></textarea>
+</div>
+<span id="address" class="text-danger" style="font-weight:bold;margin-left:250px;"></span>
+<br>
+<br><br><br>
+
+<input type="submit" name="submit" value="REGISTER" style="border-radius:5px;font-size:20px;margin-left:280px;margin-top:40px;padding:10px;width:140px;height:50px;background-color:black;border:1px solid pink;color:white;">
+<br><br><br></div>
+
+</form>
+
+</div>
+<br><br><br>
+<script  type="text/javascript">
+function validation()
+{
+  var Candidate= document.getElementById('Candidate').value;
+  var valid= false;
+  var gender= document.forms.gen;
+  var age= document.getElementById('age').value;
+    var email= document.getElementById('email').value;
+          var phone= document.getElementById('phone').value;
+          var applied= document.getElementById('applied').value;
+          var college=document.getElementById('college').value;
+            var address=document.getElementById('address').value;
+
+  if(Candidate=="")
+  {
+    document.getElementById('username').innerHTML="Please fill this field";
+    return false;
+  }
+  if(!((Candidate>='a' && Candidate<='z') || (Candidate>='A' && Candidate<='Z')))
+  {
+    document.getElementById('username').innerHTML="This field must be alphabets";
+    return false;
+  }
+
+  if(!(isNaN(Candidate)))
+  {
+      document.getElementById('username').innerHTML="This field must be alphabets";
+      return false;
+  }
+
+  for(var i=0;i<gender.length;i++)
+  {
+    if(gender[i].checked)
+    {
+      valid=true;
+      break;
+    }
+  }
+  if(!valid){
+  document.getElementById('gender').innerHTML="Please select this field";
+    return false;
+  }
+
+  if(age=="Choose option")
+  {
+    document.getElementById('language').innerHTML="Please select this field";
+    return false;
+  }
+
+  if(email=="")
+  {
+    document.getElementById('emails').innerHTML="Please fill this field";
+    return false;
+  }
+  if(email.indexOf('@')<=0){
+    document.getElementById('emails').innerHTML="Include text infront of '@'";
+    return false;
+  }
+  if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.'))
+  {
+    document.getElementById('emails').innerHTML="Enter email properly after '.'";
+    return false;
+  }
+
+  if(phone=="")
+  {
+    document.getElementById('phone').innerHTML="Please fill this field";
+    return false;
+  }
+  if(isNaN(phone)){
+    document.getElementById('phone').innerHTML="This field must be Number";
+    return false;
+  }
+  if(phone.length!=10)
+  {
+    document.getElementById('phone').innerHTML=" Entered number must be 10 digits";
+    return false;
+  }
+
+  if(applied=="Choose option")
+  {
+    document.getElementById('course').innerHTML="Please select this field";
+    return false;
+  }
+  if(applied=="")
+  {
+    document.getElementById('college').innerHTML="Please fill this field";
+    return false;
+  }
+  if(!((applied>='a' && applied<='z') || (applied>='A' && applied<='Z')) )
+  {
+    document.getElementById('college').innerHTML="This field must be alphabets";
+    return false;
+  }
+  if(address=="")
+  {
+    document.getElementById('address').innerHTML="Please fill this field";
+    return false;
+  }
+
+
+}
+</script>
+</body>
+</html>
